@@ -1,4 +1,4 @@
-let element = document.querySelectorAll( 'img' );
+let element = document.querySelectorAll( '.animacja' );
 
 for (let i=0; i<element.length; i++) {
 
