@@ -50,6 +50,7 @@ a:visited{
 }
 nav {
     margin: 0 auto;
+    z-index: 9999;
   }
   nav ul {
     list-style: none;
@@ -267,16 +268,9 @@ nav.stroke ul li a:hover:after {
     text-transform: uppercase;
     font-kerning: none;
 }
-.section-2{
-    background-image: url(../img/section2bgjpg.jpg);
-    min-height:1300px;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
 .section-3{
     background-image: url(../img/section3-bg.png);
     background-repeat: no-repeat;
-    
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -334,16 +328,22 @@ nav.stroke ul li a:hover:after {
 
 
 }
-img.animation {
-	position: relative;
-    -webkit-animation: mymove 0.75s ; /* Chrome, Safari, Opera */ 
+.animacja{
+    visibility: hidden;
+}
+
+.animation {
+    visibility: visible;
+    -webkit-animation: mymove .75s ; /* Chrome, Safari, Opera */ 
     animation: mymove .75s ;
+    z-index: 9998;
 }
 @-webkit-keyframes mymove {
-    0%   {top: -100px;}
+    0%   {bottom: 0px;}
     100%  {top: 100px;}
 }
 @keyframes mymove {
-    0%   {top: -100px;}
-    100%  {top: 0px;}
+    0%   {bottom: 100px;opacity: 0;}
+    50%  {opacity: 0;}
+    100% {bottom: 0px;opacity: 1;}
 }
